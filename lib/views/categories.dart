@@ -7,7 +7,7 @@ import 'package:photos/widgets/widget.dart';
 
 class Categories extends StatefulWidget {
   final String categoriesName;
-   Categories({Key? key, required this.categoriesName}) : super(key: key);
+   const Categories({Key? key, required this.categoriesName}) : super(key: key);
 
   @override
   _CategoriesState createState() => _CategoriesState();

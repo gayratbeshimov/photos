@@ -21,7 +21,7 @@ Widget brandName() {
 
 Widget wallpaperList(List<WallpaperModel> wallpapers, context) {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 16),
+    padding: const EdgeInsets.symmetric(horizontal: 16),
     child: GridView.count(
       physics: const ClampingScrollPhysics(),
       shrinkWrap: true,
@@ -42,13 +42,11 @@ Widget wallpaperList(List<WallpaperModel> wallpapers, context) {
           child: Hero(
             tag: wallpaper.src!.portrait ?? "",
             child: GridTile(
-              child: Container(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.network(
-                    wallpaper.src!.portrait ?? "",
-                    fit: BoxFit.cover,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.network(
+                  wallpaper.src!.portrait ?? "",
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
